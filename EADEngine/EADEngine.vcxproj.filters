@@ -4,6 +4,15 @@
     <Filter Include="EADEngine">
       <UniqueIdentifier>{65F3CA6F-D15D-7FE6-1A9C-308C86455D3B}</UniqueIdentifier>
     </Filter>
+    <Filter Include="EADEngine\Events">
+      <UniqueIdentifier>{A93B0A07-9534-2959-BE66-0EDEAABE0865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{600941e9-473e-4291-b960-e2742ed11823}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{07f7af5f-0640-4d0a-b929-d714d668df79}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\EADEngine.h" />
@@ -16,13 +25,28 @@
     <ClInclude Include="src\EADEngine\EntryPoint.h">
       <Filter>EADEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\EADEngine\Events\ApplicationEvent.h">
+      <Filter>EADEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EADEngine\Events\Event.h">
+      <Filter>EADEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EADEngine\Events\KeyEvent.h">
+      <Filter>EADEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EADEngine\Events\MouseEvent.h">
+      <Filter>EADEngine\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\EADEngine\Log.h">
       <Filter>EADEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\EADEngine\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\EADEngine\Events\Event.h" />
-    <ClInclude Include="src\EADEngine\Events\KeyEvent.h" />
-    <ClInclude Include="src\EADEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\eadpch.h" />
+    <ClInclude Include="src\EADEngine\Window.h">
+      <Filter>EADEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EADEngine\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\EADEngine\Application.cpp">
@@ -30,6 +54,10 @@
     </ClCompile>
     <ClCompile Include="src\EADEngine\Log.cpp">
       <Filter>EADEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\eadpch.cpp" />
+    <ClCompile Include="src\EADEngine\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

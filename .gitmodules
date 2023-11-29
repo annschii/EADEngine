@@ -1,3 +1,6 @@
 [submodule "EADEngine/vendor/spdlog"]
 	path = EADEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "EADEngine/vendor/GLFW"]
+	path = EADEngine/vendor/GLFW
+	url = https://github.com/TheCherno/glfw

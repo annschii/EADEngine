@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace EADEngine {
 
 	class EADEngine_API MouseMovedEvent : public Event

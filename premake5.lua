@@ -11,6 +11,11 @@ workspace "EADEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "EADEngine/vendor/GLFW/include"
+
+include "EADEngine/vendor/GLFW"
+
 project "EADEngine"
 	location "EADEngine"
 	kind "SharedLib"
@@ -18,6 +23,9 @@ project "EADEngine"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	pchheader "eadpch.h"
+	pchsource "EADEngine/src/eadpch.cpp"
 	
 	files
 	{
@@ -28,7 +36,15 @@ project "EADEngine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"openg132.lib",
+		"dwmapi.lib"
 	}
 
 	filter "system:windows"
