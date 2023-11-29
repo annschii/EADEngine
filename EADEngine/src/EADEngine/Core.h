@@ -1,6 +1,5 @@
 #pragma once
 
-
 #ifdef EAD_PLATFORM_WINDOWS
 	#ifdef EAD_BUILD_DLL
 		#define EADEngine_API __declspec(dllexport)
@@ -10,3 +9,5 @@
 #else
 	#error EADEngine only supports Windows
 #endif // EAD_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)
